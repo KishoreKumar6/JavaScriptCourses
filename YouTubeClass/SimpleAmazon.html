@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>DOM Projects</title>
+  </head>
+  <style>
+    body{
+      font-family: Arial;
+    }
+    .cl-btn{
+      background-color: black;
+      color: white;
+      font-weight: bold;
+      padding: 15px;
+      border-radius: 50px;
+      cursor: pointer;
+      margin-bottom: 30px;
+      box-shadow: 3px 3px 7px 0px rgba(0, 0, 0, 0.75);
+    }
+    .js-btncolor{
+      background-color: gainsboro;
+      color: black;
+    }
+    .cls-input{
+      padding: 10px;
+    }
+    .cls-butn2{
+      padding: 11px 50px;
+      background-color: green;
+      color: white;
+      font-size: 15px;
+      border: none;
+      cursor:  ;
+    }
+  </style>
+  <body>
+    <p>YouTube Subscribe Button</p>
+    <button class="js-button cl-btn" onclick="btnfn()">Subscribe</button>
+    <p>Amazon Shipping Calculator</p>
+    <input class="js-input cls-input" placeholder="Enter Cost"
+    >
+    <button class="js-button2 cls-butn2" onclick="calculate()">Calculate</button>
+    <p class="js-para"></p>
+ 
+    <script>
+   let button = document.querySelector('.js-button')
+
+ 
+   function btnfn(){
+    if (button.innerHTML ==='Subscribe'){
+      button.innerHTML = 'Subscribedd';
+      button.classList.add('js-btncolor')
+    }
+    
+    else {
+      button.innerHTML = 'Subscribe' 
+      button.classList.remove('js-btncolor')
+    }
+   }
+   function calculate(){  
+   let input = document.querySelector('.js-input')
+    let para = document.querySelector('.js-para')
+    let cost = Number(input.value);
+    if(!cost){
+      alert ("Please enter the cost")
+    }
+  else if(cost < 40){
+      cost = cost + 10
+      console.log (cost)
+      para.innerHTML = `$${cost}`
+    }
+    else{
+     para.innerHTML = `$${cost}`
+        }
+   }
+    </script>
+  </body>
+</html>
