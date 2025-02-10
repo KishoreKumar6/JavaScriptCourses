@@ -1,0 +1,36 @@
+.item{
+  background: linear-gradient(45deg, violet, rgb(104, 104, 221));
+  color: white;
+  width: 100px;
+  margin: 5px;
+  height: 30px;
+  padding: 10px;
+  border: 2px solid yellow;
+  text-align: center;
+  position: relative;
+  border-radius: 10px;
+}
+.child{
+  display: flex;
+  border: 2px solid yellowgreen;
+  background-color: lightgoldenrodyellow;
+  height: 300px;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  
+}
+.img{
+  width: 120px;
+  position: absolute;
+  right: 0px;
+  top: 60px;
+}
+.para{
+  display: flex;
+  position: relative;
+  top: 50px;
+}
+.parent{
+  border: 2px solid;
+  height: 400px;
+}
