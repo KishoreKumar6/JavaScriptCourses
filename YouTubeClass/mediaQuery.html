@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  .one{
+    background-color: black;
+    height: 50px;
+    flex-basis: 20%;
+    margin: 5px;
+  }
+  .container{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  @media screen and (max-width: 600px) {
+     .one{
+      flex-basis: 40%;
+     }
+  }
+  @media screen and (max-width: 300px){
+    .one{
+      flex-basis: 100%;
+    }
+  }
+
+
+  /* min-width starts from left and max-width starts from right */
+  </style>
+<body>
+
+<div class="container">
+  <div class="one"></div>
+  <div class="one"></div>
+  <div class="one"></div>
+  <div class="one"></div>
+</div>
+
+</body>
+</html>
