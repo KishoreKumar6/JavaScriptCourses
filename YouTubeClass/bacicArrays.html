@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<input type="text" placeholder="Todo  name" onkeydown="keydown(event)"class="js-input">
+<button class="js-btn" onclick="add()" >Add</button>
+<p class="js-para"></p>
+<body>
+<script>
+//   const myArray = [10,20,30]
+//   console.log (myArray)
+//   console.log (myArray[0]);
+//   myArray[0] = 40
+//   console.log(myArray)
+
+// const arry =  [1, 'hello', true, {name:'kishore'}, [1,2]]
+// /*use array inside array]*/
+//   console.log (myArray.length)
+
+//   myArray.push(50)
+//   console.log(myArray)
+
+//   myArray.splice(0,2)
+//   console.log(myArray)
+
+/*const todoList = [];
+function add(){
+  let input = document.querySelector('.js-input')
+  let para = document.querySelector('.js-para')
+  const inputValue = input.value
+  todoList.push(inputValue)
+  console.log (todoList)
+  para.innerHTML = inputValue
+  input.value = '';
+ 
+}
+
+  function keydown(event){
+  if (event.key === 'Enter'){
+    add();
+  }
+}*/
+
+const nums = [1,1,3];
+let total = 0;
+for (let i = 0; i < nums.length; i++ ){
+  const num = nums[i];
+  total = total + num;
+}
+console.log (total)
+
+//sample example
+const num1 = [2,2,6]
+let sum = 0;
+for ( let i = 0; i < num1.length; i++){
+  sum = sum + num1[i]
+}
+console.log(sum)
+
+//double the number
+let num2 = [1,1,3]
+const numdouble = []
+
+for ( i = 0; i < num2.length; i++){
+  const numss = num2[i]
+  numdouble.push(numss * 2)
+}
+console.log (numdouble)
+</script>
+
+</body>
+</html>
