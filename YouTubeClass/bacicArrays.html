@@ -69,6 +69,81 @@ for ( i = 0; i < num2.length; i++){
   numdouble.push(numss * 2)
 }
 console.log (numdouble)
+
+
+      const nums = [10,20,30]
+    //last element
+    console.log (nums[nums.length - 1])
+    //push element
+    nums.push(40)
+    console.log (nums)
+    //pop element 
+    nums.pop()
+    console.log (nums)
+
+    let matrix = [[2,3,4],[5,6,7],[8,9,1]]
+    console.log (matrix[0][2])
+
+    //shift and unshift 
+    // shift remove the first element and unshift add the first element
+
+    let arr = ['a','b','c','d']
+
+    console.log( arr.shift())//remove
+    console.log (arr)
+
+    console.log (arr.unshift('f'))//add
+    console.log (arr)
+
+    //splice
+     let array = ['a','b','c','d','f']
+
+     console.log(array)
+     array.splice(2,1)
+     console.log (array)
+     array.splice(2,2)
+     console.log (array)
+
+    //replace the value 
+     let array2 = ['a','b','c','d','f']
+     array2.splice (1,1,'x')//b removed x added
+     console.log(array2) 
+
+     array2.splice (2,1, 'y')
+     console.log(array2)
+
+     array2.splice(3,2, 'z','w')//d,f removed z,w add
+     console.log (array2)
+
+     array2.splice(1,0,'a')//only insert a 
+     console.log (array2)
+
+
+    //slice --> show only one element
+     let arr3 = ['a','b','c','d','f'] 
+    
+     console.log ( arr3.slice (1,2))
+
+     //reverse the element
+     console.log(arr3.reverse())
+
+     //join and split
+     let arr4 = ['a','b','c','d','f'] 
+     console.log (arr4.join())
+     
+     let arr5 = "a,b,c,d"
+     console.log (arr5.split(','))
+
+     //concat array and spread array
+     let firstArray =  ['a','b','c','d','f'] 
+     let secondArray = ['g','h','i','j']
+     
+     let joinBoth = firstArray.concat(secondArray)
+     console.log(joinBoth)
+
+     let joinarray = [ ...firstArray,...secondArray]
+    console.log(joinarray)
+
 </script>
 
 </body>
