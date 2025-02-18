@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+
+  <script>
+    const num = [10,20,30]
+    num[2] = 99
+    console.log (num)
+
+    const arr = [20,40,60]
+    
+    console.log(arr [arr.length - 1])
+
+    //example 2
+    function getLastValue(array){
+      const arr1 = array[array.length - 1]
+      return arr1
+    }
+   console.log(getLastValue([20,40,50])) ;
+  console.log(getLastValue(['hii', 'hello', 'hey']) );
+   
+  //swap first and last element
+    function arraySwap(array){
+      const lastIndex = array.length - 1;
+      const lastValue = array[lastIndex];
+      const firstIndex = array[0]
+       
+       array[0] = lastValue;
+       array[lastIndex] = firstIndex;
+
+       return array
+      }
+      console.log (arraySwap([10,20,30,40]))
+      console.log (arraySwap(['hi','hello','good']))
+
+  //loop (0,2,4,...10)
+  for(let i = 0; i <= 10; i += 2 ){
+    console.log (i)
+  }
+
+  console.log('------------------------------')
+
+  //counts down from 5 to 0
+  for (let i = 5; i >= 0; i--){
+    console.log (i);
+  }
+  console.log('------------------------------')
+ 
+  //while loop 
+  let i = 0;
+  while(i <= 10){
+    console.log(i);
+    i+=2
+  }
+  console.log('------------------------------')
+
+  let j = 5;
+  while ( j >= 0){
+    console.log(j);
+    j--;
+  }
+
+  //array add with one number
+  const arr2 = [1,2,3]
+  const result = []
+  for ( let i = 0; i < arr2.length; i++){
+    result.push(arr2[i] + 1);
+  }
+  console.log (result);
+
+//add one in function
+function addOne(array){
+  let result = []
+  
+ for (let i = 0; i < array.length; i++){
+  result.push(array[i] + 1)
+ }
+ return result;
+}
+console.log (addOne([1,2,3]))
+console.log(addOne([-2,-1,0,99])) 
+
+//add array and num
+function addNum(array,num){
+  let result = [];
+  for (let i = 0; i < array.length; i++){
+    result.push (array[i] + num)
+  }
+  return result
+}
+console.log(addNum([1,2,3],2))  
+console.log(addNum([-2,-1,0,99],2))
+
+//add two arrays
+  function addArrays(array1,array2){
+    let result = [];
+    for (let i = 0; i < array1.length; i++){
+      result.push (array1[i] + array2[i])
+    }
+    return result;
+  }
+  console.log (addArrays([1,1,2], [1,1,3]));
+  console.log (addArrays([1,2,3], [4,5,6]));
+
+  //count positive nums
+  function countPositive(nums){
+    let result = 0;
+    for (let i = 0; i < nums.length; i++){
+      if ( nums[i] > 0 ){
+        result++;
+      }
+    }
+    return result
+  }
+  console.log (countPositive([1, -3, 2]));
+
+   //MinMax 
+   function minMax(nums){
+    for (let i = 0; i < nums.length; i++){
+      
+    }
+   }
+  </script>
+</body>
+</html>
