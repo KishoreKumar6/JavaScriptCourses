@@ -1,0 +1,72 @@
+body{
+  background-color: rgb(64, 99, 145);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.div1{
+  justify-items: center;
+}
+.quizContainer{
+  border:1px solid black;
+  width:35%;
+  background-image: linear-gradient(rgb(61, 114, 175),rgb(199, 136, 199));
+  margin:0 33%;
+  border-radius: 10px;
+}
+h2{
+  color: navy;
+  font-size: 25px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  text-align: center;
+  background-image: linear-gradient(rgb(60, 180, 180),rgb(165, 116, 165));
+  padding: 8px;
+  font-weight:bolder;
+}
+label{
+  color:white;
+  font-size: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+h1{
+  color: rgb(0, 0, 0);
+  text-align: center;
+  font-style: italic;
+  text-decoration: underline;
+  background-color: blue;
+  width: 10%;
+  padding: 10px 25px;
+  border-radius: 100%;
+  display: flex;
+  box-shadow:0px 5px 10px 5px #aaaaaa;
+  justify-content: center;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+ul{
+  padding:0;
+  margin: 0;
+}
+li{
+  list-style-type:none;
+  padding: 5px 14px;
+  /* border-bottom: 1px solid gray; */
+}
+.submitBtn{
+  padding: 5px 25px;
+  text-align: center;
+  margin:5px 0px;
+  background-image: linear-gradient(rgb(87, 209, 158),green);
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+  color: white;
+  margin-left: 35%;
+  font-size: 15px;
+  border-radius: 25px;
+}
+
+
+
+
+
+
+
+
+
