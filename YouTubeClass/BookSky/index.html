@@ -1,1 +1,189 @@
+<!DOCTYPE html>
+<head>
+    <title>Booksky</title>
+    <link rel="icon" href="ironman.jpeg.jpg">
+</head>
+<body>
+    <style>
+        *{
+            margin: 0px;
+        }
+        .top{
+            background-color: pink;
+            padding: 10px;
+            text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
 
+        }
+        .mid{
+            margin: 40px;
+            width: 300px;
+            display: inline-block;
+            background-color:burlywood;
+            color: white;
+            padding: 10px;
+            border-radius: 10px;
+            box-shadow: 5px 5px 5px rgba(0,0,0,0.5); 
+            vertical-align: top;  
+        }
+        .a{
+            color: red;
+            font-size: 30px;
+            padding-left: 0px;
+            padding-bottom: 5px;
+            text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+        }
+        .btn{
+            background-color: pink;
+            color: black;
+            margin: 10px;
+            border-radius: 10px;
+            padding: 10px;
+            box-shadow: 5px 5px 5px rgba(0,0,0,0.5);
+        }
+        .btn2{
+            background-color: pink;
+            color: black;
+            margin: 10px;
+            border-radius: 10px;
+            padding: 10px;
+            box-shadow: 5px 5px 5px rgba(0,0,0,0.5);
+        }
+        .overlay{
+        background-color: black;
+        width: 100%;
+        height: 100%;
+        left: 0px;
+        top: 0px;
+        position: absolute;
+        opacity: 0.8;
+        z-index: 1;
+        display: none;
+        }
+        .popup{
+            position: absolute;
+            z-index: 2;
+            background-color: lightpink;
+            color: black;
+            width: 40%;
+            padding: 20px;
+            border-radius: 10px;
+            left: 30%;
+            top: 20%;
+            box-shadow: 10px 10px 5px rgba(0,0,0,0.5);
+            display: none;
+        }
+        .btn3{
+            border-radius: 100%;
+            font-size: 40px;
+            box-shadow: 3px 3px 5px rgba(0,0,0,0.5);
+            background-color: pink;
+            right: 30px; 
+            position: fixed; 
+            padding: 20px;
+            bottom: 30px;
+        }
+        .booktitle{
+            background: transparent;
+            border :none ;
+            width: 100%;
+            margin: 5px;
+            padding: 5px;
+            font-size: 15px;
+            border-bottom: solid 2px;
+        }
+        .bookauthor{
+            background: transparent;
+            border :none ;
+            width: 100%;
+            margin: 5px;
+            padding: 5px;
+            font-size: 15px;
+            border-bottom: solid 2px;
+
+        }
+        .textarea{
+            background: transparent;
+            width: 100%;
+            margin: 5px;
+            padding: 5px;
+            font-size: 15px;
+            border: solid 2px;
+        }
+        .addbtn{
+            background-color: pink;
+            color: black;
+            margin: 10px;
+            border-radius: 10px;
+            padding: 10px;
+            box-shadow: 5px 5px 5px rgba(0,0,0,0.5);
+        }
+
+    </style>
+    <div class="top">
+        <h1>Booksky</h1>
+    </div>
+    <div class="container">
+    <div class="mid">
+        <p class="a">Rich Dad Poor Dad</p>
+        <p><b>Robert</b></p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam cum, aut, distinctio laudantium dolorum itaque libero voluptas perspiciatis molestiae laboriosam velit tenetur eaque inventore architecto saepe, rem error quidem iure culpa modi veniam vitae? Cumque velit ipsam culpa tempore, repudiandae enim! Dolorem similique eaque aut aliquid non maxime, error repellat?</p>
+    
+        <button class="btn2" onclick="delbtn(event)">Delete</button>
+    </div></div>
+   
+    </div>
+    <button class="btn3"  onclick="show()"> + </button>
+
+    <div class="overlay"></div>
+    <div class="popup">
+        <h3>Add Book</h3>
+        <input type="text" class="booktitle" placeholder="Book Title">  
+        <input type="text" class="bookauthor" placeholder="Book author">  
+         <textarea class="textarea" placeholder="short Description"></textarea>
+        <button class="addbtn">Add</button>
+       
+<button class="btn" onclick="closeup()">Close</button>
+</div>
+
+
+<script>
+    const overlay1 = document.querySelector(".overlay")
+    const popup1 = document.querySelector(".popup")
+    function show()
+    {
+        overlay1.style.display="block"
+        popup1.style.display="block"
+    }
+    function closeup()
+    {
+        overlay1.style.display="none"
+        popup1.style.display="none"
+    }
+    const booktitle = document.querySelector(".booktitle")
+    const bookauthor = document.querySelector(".bookauthor")
+    const textarea = document.querySelector(".textarea")
+    
+    const addbtn = document.querySelector(".addbtn")
+    const container = document.querySelector(".container")
+
+addbtn.addEventListener("click",function(event){
+    var div = document.createElement("div")
+    div.setAttribute("class","mid")
+    div.innerHTML=`<h1>${booktitle.value}</h1>
+    <p><b>${bookauthor.value}</b></p>
+    <p>${textarea.value}</p>
+    <button class="btn2" onclick="delbtn(event)">Delete</button>`
+    container.append(div)
+    overlay1.style.display="none"
+    popup1.style.display="none"
+    event.preventDefault()
+    })
+    function delbtn()
+    {
+        event.target.parentElement.remove()
+    }
+   
+</script>
+
+
+</body>
